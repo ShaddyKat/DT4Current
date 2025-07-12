@@ -1,0 +1,1 @@
+[![auto_self](https://github.com/icrobotics-team5584/FRC-2025-Kittyhawk/actions/workflows/auto_self.yml/badge.svg)](https://github.com/icrobotics-team5584/FRC-2025-Kittyhawk/actions/workflows/auto_self.yml)
