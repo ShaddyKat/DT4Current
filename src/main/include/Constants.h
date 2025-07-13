@@ -16,6 +16,8 @@ namespace canid {
     constexpr int DRIVEBASE_BACK_LEFT_DRIVE = 3; 
     constexpr int DRIVEBASE_BACK_LEFT_TURN = 1;
     constexpr int DRIVEBASE_BACK_LEFT_ENCODER = 2; 
+
+    constexpr int CORAL_OUTPUT_MOTOR = 4;
 }
 
 namespace dio {

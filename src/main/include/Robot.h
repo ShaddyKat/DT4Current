@@ -11,6 +11,7 @@
 #include <ctre/phoenix/motorcontrol/can/WPI_VictorSPX.h>
 
 #include "RobotContainer.h"
+#include "Constants.h"
 
 class Robot : public frc::TimedRobot {
  public:
@@ -29,7 +30,7 @@ class Robot : public frc::TimedRobot {
   void TestPeriodic() override;
   void TestExit() override;
 
-  ctre::phoenix::motorcontrol::can::WPI_VictorSPX coral_motor{4};
+  ctre::phoenix::motorcontrol::can::WPI_VictorSPX coral_motor{canid::CORAL_OUTPUT_MOTOR};
 
  private:
   std::optional<frc2::CommandPtr> m_autonomousCommand;

@@ -6,14 +6,15 @@
 
 #include <frc2/command/CommandScheduler.h>
 #include <frc/smartdashboard/SmartDashboard.h>
-//#include <
 
 #include "Constants.h"
 #include "subsystems/SubDrivebase.h"
 
-Robot::Robot() {
+Robot::Robot()
+  : coral_motor{canid::CORAL_OUTPUT_MOTOR},
+  m_container(coral_motor) {
 
-}
+  }
 
 void Robot::RobotPeriodic() {
   frc2::CommandScheduler::GetInstance().Run();
@@ -36,7 +37,9 @@ void Robot::AutonomousInit() {
   }
 }
 
-void Robot::AutonomousPeriodic() {}
+void Robot::AutonomousPeriodic() {
+  
+}
 
 void Robot::AutonomousExit() {}
 
@@ -50,7 +53,7 @@ void Robot::TeleopPeriodic() {
   if (m_container._driverController.GetRightTriggerAxis() > 0.9) {
     coral_motor.Set(-0.6);
   } else if (m_container._driverController.GetLeftTriggerAxis() > 0.9) {
-    coral_motor.Set(0.6);
+    coral_motor.Set(0.3);
   } else {
     coral_motor.Set(0.0);
   }
